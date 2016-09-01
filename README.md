@@ -1,2 +1,3 @@
 # project-euler
-Solutions for programming challenges on projecteuler.net.
+##Description:
+Solutions for programming challenges on <a href="https://projecteuler.net/">Project Euler</a>.
