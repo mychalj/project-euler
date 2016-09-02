@@ -3,4 +3,4 @@ Computed by Mychal Johnson
 
 https://github.com/mychalj/project-euler
 
-Problem 001:
+Problem 001: 2331688
