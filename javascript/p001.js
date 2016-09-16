@@ -21,4 +21,4 @@ reduce method is used on the num array, which adds together all the
 individual values inside the array.*/
 var total = num.reduce(function(total, num){return total + num;});
 //This outputs the total variable.
-document.write(total);
+console.log(total);
