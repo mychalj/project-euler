@@ -5,15 +5,15 @@
  * https://github.com/mychalj/project-euler
  */
 
-var fibNums = [];
-var Nums = [1, 2];
-var nextFib = Nums.reduce(function(sum, num){return sum + num;});
+var fibNums = [1, 2];
+var iOne = 0;
+var iTwo = 1;
 
-while (nextFib < 5) {
-  nextFib;
-  Nums.push(nextFib);
-  fibNums.push(Nums[0]);
-  Nums.splice(0, 1);
+while (fibNums[iTwo] < 89) {
+  num = fibNums[iOne] + fibNums[iTwo];
+  fibNums.push(num);
+  iOne += 1;
+  iTwo += 1;
 }
 
 console.log(fibNums);
