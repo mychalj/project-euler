@@ -17,3 +17,10 @@ while (fibNums[iTwo] < 89) do
   iOne += 1
   iTwo += 1
 end
+
+while (fibNums[i] < 89) do
+  if (fibNums[i] % 2 == 0)
+    evenNums << fibNums[i]
+  end
+  i += 1
+end
