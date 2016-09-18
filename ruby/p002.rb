@@ -6,3 +6,7 @@
 =end
 
 fibNums = [1, 2]
+iOne = 0
+iTwo = 1
+i = 0
+evenNums = []
