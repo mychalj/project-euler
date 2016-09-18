@@ -31,8 +31,7 @@ while (fibNums[i] < 4000000) {
 }
 
 /*This total variable stores the value that is calculated when the
-reduce method is used on the num array, which adds together all the
-individual values inside the array.*/
+reduce method is used on the num array.*/
 var total = evenNums.reduce(function(sum, num){return sum + num;});
 
 //This outputs the total variable.
