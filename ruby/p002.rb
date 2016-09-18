@@ -10,3 +10,10 @@ iOne = 0
 iTwo = 1
 i = 0
 evenNums = []
+
+while (fibNums[iTwo] < 89) do
+  num = fibNums[iOne] + fibNums[iTwo]
+  fibNums << num
+  iOne += 1
+  iTwo += 1
+end
