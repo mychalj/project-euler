@@ -24,3 +24,7 @@ while (fibNums[i] < 89) do
   end
   i += 1
 end
+
+total = evenNums.inject(0){|sum, num| sum + num}
+
+puts total
