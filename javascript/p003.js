@@ -5,15 +5,24 @@
  * https://github.com/mychalj/project-euler
  */
 
-var num = 2;
+var x = 2;
+var num = 600851475143;
 var factors = [];
-var primeFactors = [];
 
-while (num < 13195) {
-  if (Number.isInteger(13195 / num)) {
-    factors.push(num);
+while (x < num) {
+  if (Number.isInteger(num / x)) {
+    factors.push(x);
   }
-  num ++;
+  x++;
 }
 
-console.log(factors);
+var primeFactors = factors.filter(function(val) {
+  for (var i = 2; i < val; i ++) {
+    if (val % i === 0) {
+      return false;
+    }
+  }
+  return val;
+});
+
+console.log(primeFactors[primeFactors.length - 1]);
