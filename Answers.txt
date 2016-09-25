@@ -5,3 +5,4 @@ https://github.com/mychalj/project-euler
 
 Problem 001: 2331688
 Problem 002: 4613732
+Problem 003: 6857
