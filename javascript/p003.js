@@ -5,26 +5,18 @@
  * https://github.com/mychalj/project-euler
  */
 
+var num = 600851475143;
 var x = 2;
-var num = 13195;
-var factors = [];
 
-var primeFactors = function(val) {
-  for (var i = 2; i < val; i ++) {
-    if (val % i === 0) {
-      return false;
+var highestPrime = function(val) {
+  while (x < val) {
+    if (val % x === 0) {
+      val /= x;
+    } else {
+      x++;
     }
   }
-  return val;
+  console.log(x);
 };
 
-while (x < num) {
-  if (Number.isInteger(num / x)) {
-    if (primeFactors(x)) {
-      factors.push(x);
-    }
-  }
-  x++;
-}
-
-console.log(factors[factors.length - 1]);
+highestPrime(num);
