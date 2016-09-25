@@ -6,23 +6,25 @@
  */
 
 var x = 2;
-var num = 600851475143;
+var num = 13195;
 var factors = [];
 
-while (x < num) {
-  if (Number.isInteger(num / x)) {
-    factors.push(x);
-  }
-  x++;
-}
-
-var primeFactors = factors.filter(function(val) {
+var primeFactors = function(val) {
   for (var i = 2; i < val; i ++) {
     if (val % i === 0) {
       return false;
     }
   }
   return val;
-});
+};
 
-console.log(primeFactors[primeFactors.length - 1]);
+while (x < num) {
+  if (Number.isInteger(num / x)) {
+    if (primeFactors(x)) {
+      factors.push(x);
+    }
+  }
+  x++;
+}
+
+console.log(factors[factors.length - 1]);
