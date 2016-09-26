@@ -15,7 +15,7 @@ i = 0
 evenNums = []
 
 #This loop calculates the numbers in the Fibonacci sequence going up to 4 million and places them in an array.
-while (fibNums[iTwo] < 89) do
+while fibNums[iTwo] < 4000000 do
   num = fibNums[iOne] + fibNums[iTwo]
   fibNums << num
   iOne += 1
@@ -23,8 +23,8 @@ while (fibNums[iTwo] < 89) do
 end
 
 #This loop pushes the even numbers from the fibNums array to the evenNums array.
-while (fibNums[i] < 89) do
-  if (fibNums[i] % 2 == 0)
+while fibNums[i] < 4000000 do
+  if fibNums[i] % 2 == 0
     evenNums << fibNums[i]
   end
   i += 1
