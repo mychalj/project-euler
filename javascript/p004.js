@@ -5,10 +5,24 @@
  * https://github.com/mychalj/project-euler
  */
 
- function isPalindrome(num) {
+function isPalindrome(num) {
   if (num === parseInt(num.toString().split("").reverse().join(""))) {
     return true;
   } else {
     return false;
+  }
+}
+
+var i, j, product, max = 0;
+
+for (i = 100; i < 999; i++) {
+  for (j = i; j < 999; j++) {
+    product = i * j;
+    if (isPalindrome(product)) {
+      if (max < product) {
+        max = product;
+        console.log(i + " * " + j + " = " + product);
+      }
+    }
   }
 }
