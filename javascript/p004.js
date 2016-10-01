@@ -26,4 +26,4 @@ for (i = 100; i < 999; i++) {
   }
 }
 
-console.log("The largest palindrome made from the product of two 3-digit numbers is " + product + ".");
+console.log("The largest palindrome made from the product of two 3-digit numbers is " + max + ".");
