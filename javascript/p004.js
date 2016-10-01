@@ -21,8 +21,9 @@ for (i = 100; i < 999; i++) {
     if (isPalindrome(product)) {
       if (max < product) {
         max = product;
-        console.log(i + " * " + j + " = " + product);
       }
     }
   }
 }
+
+console.log("The largest palindrome made from the product of two 3-digit numbers is " + product + ".");
