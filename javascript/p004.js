@@ -4,3 +4,11 @@
  *
  * https://github.com/mychalj/project-euler
  */
+
+ function isPalindrome(num) {
+  if (num === parseInt(num.toString().split("").reverse().join(""))) {
+    return true;
+  } else {
+    return false;
+  }
+}
