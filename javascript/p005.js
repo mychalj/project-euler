@@ -5,6 +5,7 @@
  * https://github.com/mychalj/project-euler
  */
 
+// Determines if a number is prime
 function isPrime(num) {
   for (var i = 2; i < num; i++) {
     if (num % i === 0) { return false; }
@@ -12,6 +13,9 @@ function isPrime(num) {
   return true;
 }
 
+// Creates an array that contains the prime number to start with in
+// the smallestMultiple function and the largest power of each of
+// the prime numbers less than and including the start number.
 function largestPower(num) {
   var powers = [];
   var index = 0;
@@ -30,6 +34,8 @@ function largestPower(num) {
   return powers;
 }
 
+// Determines the smallest number that is evenly divisible by all
+// numbers from 1 to the given positive number.
 function smallestMultiple(limit) {
   var powersArr = (largestPower(limit)).slice(1);
   var start = (largestPower(limit)).unshift();
@@ -43,4 +49,5 @@ function smallestMultiple(limit) {
   return answer;
 }
 
+// Displays the desired answered
 console.log(smallestMultiple(20));
