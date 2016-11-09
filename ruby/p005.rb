@@ -4,8 +4,6 @@
 
 # Determines if a number is prime
 def prime?(num)
-  (2..num).each do |i|
-    return false if (num % i).zero?
-    return true
-  end
+  Math.sqrt(num).to_i.downto(2).each { return false if (num % i).zero? }
+  true
 end
