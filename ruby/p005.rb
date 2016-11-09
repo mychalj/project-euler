@@ -8,6 +8,9 @@ def prime?(num)
   true
 end
 
+# Creates an array that contains the prime number to start with in
+# the smallest_multiple function and the largest power of each of
+# the prime numbers less than and including the start number.
 def largest_power(num)
   powers = []
   arr_index, start = 0
@@ -23,3 +26,19 @@ def largest_power(num)
   end
   powers.unshift(start)
 end
+
+# Determines the smallest number that is evenly divisible by all
+# numbers from 1 to the given positive number
+def smallest_multiple(limit)
+  powers_arr = largest_power(limit).slice(1..-1)
+  start = largest_power(limit).shift
+  answer = powers_arr.inject { |a, e| a * e }
+
+  (start + 1..limit).each do |i|
+    answer *= i if prime?(i)
+  end
+  puts answer
+end
+
+# Displays the desired answer
+smallest_multiple(20)
