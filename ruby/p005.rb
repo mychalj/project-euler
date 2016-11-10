@@ -37,7 +37,8 @@ def smallest_multiple(limit)
   (start + 1..limit).each do |i|
     answer *= i if prime?(i)
   end
-  puts answer
+  print 'The smallest positive number that is evenly divisible by all of'
+  puts " the numbers from 1 to #{limit} is: " + answer.to_s
 end
 
 # Displays the desired answer
