@@ -3,7 +3,7 @@ Computed by Mychal Johnson
 
 https://github.com/mychalj/project-euler
 
-Problem 001: 2331688
+Problem 001: 233168
 Problem 002: 4613732
 Problem 003: 6857
 Problem 004: 906609
