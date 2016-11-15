@@ -8,6 +8,16 @@ def prime?(num)
   true
 end
 
-# Finds the (num variable)st/th prime number
-def find_nth_prime(num)
+# Finds the (max variable)st/th prime number
+def find_nth_prime(max)
+  count = 0
+  num = 1
+
+  while count < max
+    num += 1
+    count += 1 if prime?(num)
+  end
+  puts num
 end
+
+find_nth_prime(10_001)
