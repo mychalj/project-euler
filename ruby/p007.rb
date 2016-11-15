@@ -7,3 +7,7 @@ def prime?(num)
   Math.sqrt(num).to_i.downto(2).each { |i| return false if (num % i).zero? }
   true
 end
+
+# Finds the (num variable)st/th prime number
+def find_nth_prime(num)
+end

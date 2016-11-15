@@ -13,3 +13,6 @@ function isPrime (num) {
   return true
 }
 
+// Finds the (num variable)st/th prime number
+function find_nth_prime(num) {
+}
