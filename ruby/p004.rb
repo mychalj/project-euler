@@ -1,28 +1,26 @@
-
 # Ruby Solution to Project Euler problem 4
 # by Mychal Johnson
 # https://github.com/mychalj/project-euler
 
 # Determines whether the number is a palidrome.
 def palindrome?(num)
-  return true if num == num.to_s.split('').reverse.join('').to_i
+  return true if (n = num.to_s) == n.reverse
   false
 end
 
-# Gives all the variables a default value.
-product = 0
-max = 0
-
 # Calculates the largest palindrome that was requested.
-(100..999).each do |i|
-  (100..999).each do |j|
-    product = i * j
-    if palindrome?(product)
-      max = product if max < product
+def largest_palindrome(min, max)
+  range = (min..max)
+  max = range.end
+  answer = 0
+
+  range.each do |i|
+    max.downto(i) do |j|
+      product = i * j
+      answer = product if product > answer && palindrome?(product)
     end
   end
+  puts answer
 end
 
-# Outputs the largest palindrome.
-print 'The largest palindrome made from the product of two 3-digit numbers: '
-puts max.to_s
+largest_palindrome(100, 999)
