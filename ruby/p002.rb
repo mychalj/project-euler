@@ -33,5 +33,4 @@ end
 total = even_nums.inject(0) { |a, e| a + e }
 
 # This outputs the total variable.
-print 'The sum of the even-valued numbers between 1 and 4000000 '
-puts 'using the Fibonacci sequence: ' + total.to_s
+puts total

@@ -14,4 +14,4 @@ num.delete_if { |i| (i % 3).nonzero? && (i % 5).nonzero? }
 total = num.inject(0) { |a, e| a + e }
 
 # This outputs the total variable.
-puts 'The sum of all the multiples of 3 or 5 below 1000: ' + total.to_s
+puts total

@@ -6,16 +6,16 @@
 # factor(lpm) of.
 num = 600_851_475_143
 # This variable is used to iterate through the loop to find the lpm.
-x = 2
+largest_prime = 2
 
-# This while loop keeps going until the desired lpm is stored in x.
-while x < num
-  if (num % x).zero?
-    num /= x
+# This while loop keeps going until the desired lpm is stored in largest_prime.
+while largest_prime < num
+  if (num % largest_prime).zero?
+    num /= largest_prime
   else
-    x += 1
+    largest_prime += 1
   end
 end
 
-# This outputs the lpm stored in x.
-puts 'The largest prime factor of the number 600851475143: ' + x.to_s
+# This outputs the lpm stored in largest_prime.
+puts largest_prime

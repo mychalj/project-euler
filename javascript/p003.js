@@ -8,19 +8,19 @@
 //This is the number that the function will find the largest prime factor(lpm) of.
 var num = 600851475143;
 //This variable is used to iterate through the loop to find the lpm.
-var x = 2;
+var largest_prime = 2;
 
-//This function keeps looping until the lpm is stored in x.
+//This function keeps looping until the lpm is stored in largest_prime.
 var highestPrime = function(val) {
-  while (x < val) {
-    if (val % x === 0) {
-      val /= x;
+  while (largest_prime < val) {
+    if (val % largest_prime === 0) {
+      val /= largest_prime;
     } else {
-      x++;
+      largest_prime++;
     }
   }
-  console.log(x);
+  console.log(largest_prime);
 };
 
-//Running this function will print the lpm stored in x.
+//Running this function will print the lpm stored in largest_prime.
 highestPrime(num);

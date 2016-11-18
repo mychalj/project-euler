@@ -14,20 +14,18 @@ function isPalindrome(num) {
   }
 }
 
-//Gives all the variables a default value.
-var i, j, product, max = 0;
-
 //Calculates the largest palindrome that was requested.
-for (i = 100; i < 999; i++) {
-  for (j = i; j < 999; j++) {
-    product = i * j;
-    if (isPalindrome(product)) {
-      if (max < product) {
-        max = product;
-      }
+function largest_palindrome(min, max) {
+  var i, j, product, answer = 0;
+
+  for (i = min; i < max; i++) {
+    for (j = i; j < max; j++) {
+      product = i * j;
+      if (product > answer && isPalindrome(product)) { answer = product; }
     }
   }
+  return answer
 }
 
 //Outputs the largest palindrome.
-console.log("The largest palindrome made from the product of two 3-digit numbers is " + max + ".");
+console.log(largest_palindrome(100, 999));
