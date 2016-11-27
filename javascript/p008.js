@@ -21,4 +21,4 @@ function largest_product(digits, consecutive) {
   return answer
 }
 
-console.log(largest_product(thousand_digits, 4))
+console.log(largest_product(thousand_digits, 13))
