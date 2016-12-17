@@ -4,3 +4,6 @@
  *
  * https://github.com/mychalj/project-euler
  */
+
+function pythagorean_triplet(prod) {
+}
