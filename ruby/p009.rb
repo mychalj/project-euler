@@ -3,7 +3,7 @@
 # https://github.com/mychalj/project-euler
 
 def pythagorean_triplet(product)
-  a = Math.sqrt(m) - Math.sqrt(n)
-  b = Math.sqrt(m * n)
-  c = Math.sqrt(m) + Math.sqrt(n)
+  a = (m ** 2) - (n ** 2)
+  b = (m * n) ** 2
+  c = (m ** 2) + (n ** 2)
 end
