@@ -7,7 +7,7 @@
 
 // Determines if a number is prime
 function is_prime (num) {
-  for (var i = 2; i < num; i++) {
+  for (var i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) { return false }
   }
   return true
@@ -19,7 +19,7 @@ function sum_of_primes(limit){
 
   for (var i = 2; i < limit; i++) {
     if (is_prime(i)) {
-      answer = answer + i
+      answer += i
     }
   }
   return answer
