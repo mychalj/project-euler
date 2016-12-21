@@ -5,6 +5,8 @@
  * https://github.com/mychalj/project-euler
  */
 
+// Finds the Pythagorean triplet for 'limit' and calculates the
+// product of the three integers
 function pythagorean_triplet(limit) {
   for (var a = 1; n < limit; a++) {
     for (var b = a + 1; b < limit; b++) {
