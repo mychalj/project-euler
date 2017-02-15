@@ -13,8 +13,7 @@ function largest_grid_product(grid) {
   var right_diag = check_right_diag(grid)
   var left_diag = check_left_diag(grid)
   var arr = [right, down, right_diag, left_diag]
-  console.log(arr)
-  //console.log(Math.max.apply(null, arr))
+  console.log(Math.max.apply(null, arr))
 }
 
 function check_down(grid) {
@@ -42,13 +41,27 @@ function check_right(grid) {
 }
 
 function check_right_diag(grid) {
+  var prod, rd_answer = 0
+
   for (var i = 0; i < 17; i++) {
+    for (var j = 0; j < 17; j++) {
+      prod = grid[i][j] * grid[i + 1][j + 1] * grid[i + 2][j + 2] * grid[i + 3][j + 3]
+      if (prod > rd_answer) { rd_answer = prod }
+    }
   }
+  return rd_answer
 }
 
 function check_left_diag(grid) {
-  for (var i = 3; i < 20; i++) {
+  var prod, ld_answer = 0
+
+  for (var i = 0; i < 17; i++) {
+    for (var j = 3; j < 20; j++) {
+      prod = grid[i][j] * grid[i + 1][j - 1] * grid[i + 2][j - 2] * grid[i + 3][j - 3]
+      if (prod > ld_answer) { ld_answer = prod }
+    }
   }
+  return ld_answer
 }
 
 console.log(largest_grid_product(grid_arr))
